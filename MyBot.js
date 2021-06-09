@@ -2,7 +2,8 @@ const discord = require('discord.js'); // Define / Require the discord.js module
 const client = new discord.Client(); // Creating a discord.js client instance (constructor).
 // Load HTTP module
 const http = require("http");
-
+var express = require('express');
+var app = express();
 const hostname = "127.0.0.1";
 const port = 8000;
 client.login("ODUxOYYxMzExMDA0ODUyMjI0.YL_4zQ.sXOPwWVqGrwGchdh6x00SXaH_NQ");
