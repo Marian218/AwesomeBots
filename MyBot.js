@@ -1,6 +1,6 @@
 const discord = require('discord.js'); // Define / Require the discord.js module.
 const client = new discord.Client(); // Creating a discord.js client instance (constructor).
-client.login("ODUxOYYxMzEx.pingCTF{G1thub_t0_p0dst4w4}.WVqGrwGchdh6x00SXaH_NQ");
+client.login("ODUxOYYxMzExMDA0ODUyMjI0.YL_4zQ.sXOPwWVqGrwGchdh6x00SXaH_NQ");
 require('discord-buttons')(client)
 var disbut = require('discord-buttons')// Requiring discord-buttons and binding it to the initialised client
 
@@ -12,10 +12,10 @@ client.on('message', message => {
         let btn = new disbut.MessageButton()
             .setEmoji('785062885952192512')
             .setStyle('grey')
-            .setID('testid');
+            .setID('123');
 
         let btn2 = new disbut.MessageButton()
-            .setLabel('Discord buttons!')
+            .setLabel('Working everything fine!')
             .setStyle('url')
             .setURL('https://npmjs.com/package/discord-buttons');
 
