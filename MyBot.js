@@ -1,10 +1,28 @@
 const discord = require('discord.js'); // Define / Require the discord.js module.
 const client = new discord.Client(); // Creating a discord.js client instance (constructor).
+// Load HTTP module
+const http = require("http");
+
+const hostname = "127.0.0.1";
+const port = 8000;
 client.login("ODUxOYYxMzExMDA0ODUyMjI0.YL_4zQ.sXOPwWVqGrwGchdh6x00SXaH_NQ");
 require('discord-buttons')(client)
 var disbut = require('discord-buttons')// Requiring discord-buttons and binding it to the initialised client
 
-console.log(disbut)
+// Create HTTP server
+const server = http.createServer((req, res) => {
+
+    // Set the response HTTP header with HTTP status and Content type
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+
+    // Send the response body "Hello World"
+    res.end('Hello World\n');
+});
+
+// Prints a log once the server starts listening
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+})
 
 client.on('message', message => {
     console.log(message)
